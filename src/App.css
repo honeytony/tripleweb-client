@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+}
+main {
+    width: 100%;
+}
+.container .banner {
+    border-radius: 12px;
+    margin-top: 40px;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 22px;
+    color: #2a2a2a;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    align-items: center;
+    box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.1);
+}
+.container .banner h2 span {
+    color: #5364f4;
+}
+.container .banner .welcomeImage {
+    width: 320px;
+    height: 300px;
+    background-image: url(img/girl.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(16px);
+}
+
+.container .things {
+    width: 100%;
+    height: 507px;
+    border: 1px solid #c1c1c1;
+    border-radius: 12px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .things .adv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+}
+.container .things .adv span {
+    font-size: 34px;
+    font-family: 'Montserrat';
+    color: #adadad;
+    font-weight: 400;
+}
+
+.container .things .adv button {
+    width: 379px;
+    height: 60px;
+    background-color: #5364f4;
+    color: white;
+    font-size: 24px;
+    font-family: 'Montserrat';
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.container .things .adv button:hover {
+    background-color: #4352d4;
+}
+.content .header {
+    width: 100%;
+    height: 86px;
+    border-bottom: 1px solid #adadad;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.content .header .profile span {
+    font-size: 22px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+
+.content .header .profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 220px;
+}
+
+main .container {
+    width: 80%;
+    max-width: 100%;
+    margin-left: 80px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.content .header h1 {
+    min-width: 189px;
+    height: 86px;
+    font-weight: 600;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.leftSideBar {
+    padding-left: 35px;
+    border-right: 1px solid #adadad;
+    width: 400px;
+    height: 100vh;
+}
+.leftSideBar.slim {
+    width: 120px;
+}
+.leftSideBar.slim span {
+    display: none;
+}
+.leftSideBar nav ul li.logo a {
+    font-weight: 800;
+    font-size: 30px;
+}
+.leftSideBar nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    max-width: 100%;
+    height: 580px;
+
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.leftSideBar nav ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.leftSideBar nav ul li a span {
+    text-align: left;
+    margin-left: 35px;
+}
+
+.leftSideBar nav ul li.logo {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.leftSideBar nav ul a {
+    color: #2a2a2a;
+    text-decoration: none;
+    font-size: 24px;
+    transition: 1s;
+    border: 1px solid transparent;
+}
+.leftSideBar nav ul a span {
+    border: 2px solid transparent;
+}
+.leftSideBar nav ul a:hover span {
+    border-bottom: 2px solid #e7f43f;
+}
+
+.leftSideBar.slim ul a:hover .icon:after {
+    width: 4px;
+    height: 44px;
+    content: '';
+    display: block;
+    margin-left: 78px;
+    background-color: #e7f43f;
+}
+.icon {
+    width: 45px;
+    height: 45px;
+    background-size: cover;
+}
+
+.leftSideBar nav ul li .iconThings {
+    background-image: url(./img/svg/thigs.svg);
+}
+.leftSideBar nav ul li .iconTempThings {
+    background-image: url(./img/svg/tthings.svg);
+}
+.leftSideBar nav ul li .iconShapeThings {
+    background-image: url(img/svg/sthigs.svg);
+}
+.leftSideBar nav ul li .iconInterface {
+    background-image: url(img/svg/interfaces.svg);
+}
+.leftSideBar nav ul li .iconControlCenter {
+    background-image: url(img/svg/control.svg);
+}
+.leftSideBar nav ul li .iconUsers {
+    background-image: url(img/svg/users.svg);
+}
+.leftSideBar nav ul li .iconSetting {
+    background-image: url(img/svg/settings.svg);
+}
+
+.icon.iconUser {
+    background-image: url(img/svg/users.svg);
+}

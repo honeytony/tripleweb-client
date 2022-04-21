@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tripleweb-client/static/css/main.3be106a5.css",
+    "main.js": "/tripleweb-client/static/js/main.18bf91cf.js",
+    "static/js/787.a53932b4.chunk.js": "/tripleweb-client/static/js/787.a53932b4.chunk.js",
+    "static/media/girl.png": "/tripleweb-client/static/media/girl.19aa6396a684cf8a3362.png",
+    "static/media/tthings.svg": "/tripleweb-client/static/media/tthings.dd788776a549749694b8.svg",
+    "static/media/sthigs.svg": "/tripleweb-client/static/media/sthigs.ee25f7b65f0bc7055fa1.svg",
+    "static/media/thigs.svg": "/tripleweb-client/static/media/thigs.c053b053a062f4e74bc4.svg",
+    "static/media/users.svg": "/tripleweb-client/static/media/users.ea292d5058c82c5f1ed9.svg",
+    "index.html": "/tripleweb-client/index.html",
+    "static/media/settings.svg": "/tripleweb-client/static/media/settings.135049fda6dd6c3ccfa8.svg",
+    "static/media/control.svg": "/tripleweb-client/static/media/control.00944771511fd6e77bc0.svg",
+    "static/media/interfaces.svg": "/tripleweb-client/static/media/interfaces.2f9e3e5e620d8cc029e1.svg",
+    "main.3be106a5.css.map": "/tripleweb-client/static/css/main.3be106a5.css.map",
+    "main.18bf91cf.js.map": "/tripleweb-client/static/js/main.18bf91cf.js.map",
+    "787.a53932b4.chunk.js.map": "/tripleweb-client/static/js/787.a53932b4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3be106a5.css",
+    "static/js/main.18bf91cf.js"
+  ]
+}

@@ -1,35 +1,40 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 import VidgetContainer from './vidgetContainer';
 import VidgetList from './vidgetList';
 import vidgets from './vidgetStore';
 
 const DragTable = (props) => {
-    const [cardList] = useState(vidgets);
-    const [currentCardList, setCurrentCardList] = useState([cardList]); //Виджеты в контейнере
+    const [vidgetList] = useState(vidgets);
+    const [currentVidgetList, setCurrentVidgetList] = useState([]); //Виджеты в контейнере
 
-    const [currentCard, setCurrentCard] = useState(); //Выбранный виджет
+    const [currentVidget, setCurrentVidget] = useState(); //Выбранный виджет
 
-    function dragStartHandler(e, card) {
-        setCurrentCard(card);
+    function dragStartHandler(e, Vidget) {
+        setCurrentVidget(Vidget);
         console.log('drag');
     }
+    useEffect(() => {
+        console.log('vidgetList = ', vidgetList);
+        console.log('currVIlist=', currentVidgetList);
+        console.log(window.innerWidth);
+    }, []);
 
-    function dragOverHandler(e, card) {
+    function dragOverHandler(e, Vidget) {
         e.preventDefault();
         e.target.style.border = '2px solid green';
     }
-    function dragEndHandler(e, card) {
+    function dragEndHandler(e, Vidget) {
         e.target.style.background = 'white';
     }
-    function dropHandler(e, card) {
+    function dropHandler(e, Vidget) {
         e.preventDefault();
         e.target.style.background = 'white';
         e.target.style.border = 'none';
-        setCurrentCardList((oldList) => [...oldList, currentCard]);
+        setCurrentVidgetList((oldList) => [...oldList, currentVidget]);
     }
 
-    const sortCards = (a, b) => {
+    const sortVidgets = (a, b) => {
         if (a.order > b.order) {
             return 1;
         } else {
@@ -40,16 +45,16 @@ const DragTable = (props) => {
     return (
         <div className="wrapper">
             <VidgetList
-                cardList={cardList}
-                sortCards={sortCards}
+                VidgetList={vidgetList}
+                sortVidgets={sortVidgets}
                 dragStartHandler={dragStartHandler}
                 dragEndHandler={dragEndHandler}
                 dropHandler={dropHandler}
             />
             <VidgetContainer
-                currentCardList={currentCardList}
-                cardList={cardList}
-                sortCards={sortCards}
+                currentVidgetList={currentVidgetList}
+                VidgetList={vidgetList}
+                sortVidgets={sortVidgets}
                 onDragStart={dragStartHandler}
                 onDragLeave={dragEndHandler}
                 onDragEnd={dragEndHandler}

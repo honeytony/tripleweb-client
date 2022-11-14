@@ -41,7 +41,11 @@
     border: 1px solid black;
     cursor: pointer;
 }
-
+.container .vidgetTextArea,
+.container .vidgetButton,
+.container .vidgetLed {
+    position: absolute;
+}
 .container .vidgetTextArea {
     height: 40px;
     width: 200px;

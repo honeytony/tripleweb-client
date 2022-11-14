@@ -1,23 +1,47 @@
 import React from 'react';
+import Draggable from 'react-draggable';
 
-const VidgetContainer = ({ dropHandler, currentCardList, dragOverHandler }) => {
+const VidgetContainer = ({ dropHandler, currentVidgetList, dragOverHandler }) => {
     return (
         <div
             className={'container'}
             onDrop={(e) => dropHandler(e)}
             onDragOver={(e) => dragOverHandler(e)}>
-            {currentCardList &&
-                currentCardList.map((card) => {
-                    switch (card.object) {
+            {currentVidgetList &&
+                currentVidgetList.map((Vidget, index) => {
+                    switch (Vidget.object) {
                         case 'text':
-                            return <input type="text" className="vidgetTextArea" />;
+                            return (
+                                <Draggable
+                                    key={`${Vidget.id}_${index}`}
+                                    defaultPosition={{ x: 0, y: 0 }}
+                                    bounds={{ left: 0, top: 0 }}>
+                                    <input type="text" className="vidgetTextArea" />
+                                </Draggable>
+                            );
 
                         case 'button':
                             return (
-                                <input type="button" className="vidgetButton" value="Отправить" />
+                                <Draggable
+                                    key={`${Vidget.id}_${index}`}
+                                    defaultPosition={{ x: 0, y: 0 }}
+                                    bounds={{ left: 0, top: 0 }}>
+                                    <input
+                                        type="button"
+                                        className="vidgetButton"
+                                        value="Отправить"
+                                    />
+                                </Draggable>
                             );
                         case 'textarea':
-                            return <div className="vidgetLed">0.0</div>;
+                            return (
+                                <Draggable
+                                    key={`${Vidget.id}_${index}`}
+                                    defaultPosition={{ x: 0, y: 0 }}
+                                    bounds={{ left: 0, top: 0 }}>
+                                    <div className="vidgetLed">0.0</div>
+                                </Draggable>
+                            );
                         default:
                             return <p>Такого виджета не существует</p>;
                     }

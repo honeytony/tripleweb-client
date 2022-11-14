@@ -1,18 +1,18 @@
 import React from 'react';
 
-const VidgetList = ({ cardList, sortCards, dragStartHandler, dragEndHandler, dropHandler }) => {
+const VidgetList = ({ VidgetList, sortVidgets, dragStartHandler, dragEndHandler, dropHandler }) => {
     return (
         <div className="vidget-list">
-            {cardList.sort(sortCards).map((card) => (
+            {VidgetList.sort(sortVidgets).map((vidget) => (
                 <div
-                    onDragStart={(e) => dragStartHandler(e, card)}
+                    onDragStart={(e) => dragStartHandler(e, vidget)}
                     onDragLeave={(e) => dragEndHandler(e)}
                     onDragEnd={(e) => dragEndHandler(e)}
-                    onDrop={(e) => dropHandler(e, card)}
+                    onDrop={(e) => dropHandler(e, vidget)}
                     draggable={true}
                     className={'vidget'}
-                    key={`${card.id}`}>
-                    {card.text}
+                    key={`${vidget.id}`}>
+                    {vidget.text}
                 </div>
             ))}
         </div>
